@@ -36,46 +36,52 @@ export default function MainNavbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+          isScrolled ? 'bg-white/0 backdrop-blur-lg border-b border-white/10 shadow-lg py-4' : 'bg-transparent py-6'
         }`}
       >
-        <div className="container mx-auto px-6 flex justify-between items-center">
+        <div className="container mx-auto px-6 flex items-center justify-between relative h-12">
+          
+          {/* Mobile Menu Toggle - Left aligned */}
+          <div className="flex-1 md:hidden flex justify-start">
+             <button 
+              className="z-50 p-2 -ml-2 text-neutral-900"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
 
+          {/* Logo - Centered Absolutely */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="text-neutral-900"
+              aria-label="Home"
+            >
+              <CloudinaryImage 
+                publicId="logo-main2_uldguv" 
+                alt="Geeshan Bandara Logo" 
+                className="h-32 w-auto object-contain" 
+              />
+            </button>
+          </div>
 
-          {/* Logo */}
-          <button 
-            onClick={() => scrollToSection('home')}
-            className={`z-50 relative ${isMobileMenuOpen ? 'text-neutral-900' : 'text-neutral-900'}`} // Removed specific text styling, kept layout props
-            aria-label="Home"
-          >
-            <CloudinaryImage 
-              publicId="output-onlinepngtools_2_hxitel" 
-              alt="Geeshan Bandara Logo" 
-              className="h-24 w-auto object-contain" // Adjusted height for navbar
-            />
-          </button>
+          {/* Spacer for Desktop Left (to balance flex if needed, or just let justify-end handle right) */}
+          <div className="hidden md:block flex-1"></div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex gap-12">
+          {/* Desktop Menu - Right aligned */}
+          <div className="hidden md:flex flex-1 justify-end gap-12">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium tracking-[0.2em] uppercase text-neutral-500 hover:text-neutral-900 transition-colors relative group"
+                className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-500 hover:text-neutral-900 transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-neutral-900 transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </div>
-
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden z-50 p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
         </div>
       </motion.nav>
 

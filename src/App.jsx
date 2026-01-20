@@ -9,7 +9,7 @@ import GalleryGrid from './components/GalleryGrid';
 import ContactSection from './components/ContactSection';
 import CustomCursor from './components/CustomCursor';
 import AlbumPage from './components/AlbumPage';
-
+import WhatsAppButton from './components/WhatsAppButton';
 function HomePage() {
   const [currentCategory, setCurrentCategory] = useState('all');
 
@@ -46,12 +46,16 @@ function HomePage() {
   );
 }
 
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/album/:id" element={<AlbumPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/album/:id" element={<AlbumPage />} />
+      </Routes>
+      <WhatsAppButton />
+    </>
   );
 }
 
