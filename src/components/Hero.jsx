@@ -4,12 +4,12 @@ import { ArrowDown } from 'lucide-react';
 import CloudinaryImage from './CloudinaryImage';
 
 const sliderImages = [
-  "5_xmo6gy", 
-  "1_y3mkde",
-  "4_ihmesj",
-  "3_gwbjgs",
-  "9_hi67hn",
-  "8_pjatrv",
+  { publicId: "5_xmo6gy", title: "GOSSIP POLES" },
+  { publicId: "1_y3mkde", title: "Portfolio" },
+  { publicId: "4_ihmesj", title: "Flying to loved" },
+  { publicId: "3_gwbjgs", title: "Death is the..." },
+  { publicId: "9_hi67hn", title: "FAMILY" },
+  { publicId: "8_pjatrv", title: "Spring is far away" },
 ];
 
 export default function Hero() {
@@ -41,7 +41,7 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full"
           >
             <CloudinaryImage 
-              publicId={sliderImages[currentIndex]} 
+              publicId={sliderImages[currentIndex].publicId} 
               alt={`Hero Visual ${currentIndex + 1}`} 
               className="w-full h-full object-cover"
             />
@@ -54,18 +54,20 @@ export default function Hero() {
       {/* Content Overlay */}
       <div className="relative z-10 flex items-center justify-center p-12 text-center h-full w-full">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="max-w-4xl space-y-8"
+          className="max-w-5xl/ space-y-8"
         >
-           <h1 className="text-5xl md:text-7xl lg:text-9xl font-light tracking-tighter text-white leading-[0.9] drop-shadow-sm">
-            Visual <br/> 
-            <span className="font-serif italic">Poetry.</span>
-          </h1>
-          <p className="text-white/80 font-light tracking-widest text-lg md:text-xl max-w-lg mx-auto drop-shadow-sm">
-            Colombo based Wedding & Portrait Photographer crafting artistic legacies.
-          </p>
+          <AnimatePresence mode="wait">
+             <motion.h1
+              key={currentIndex}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-2xl md:text-2xl lg:text-2xl font-light tracking-tighter text-white leading-[1.1] drop-shadow-sm uppercase"
+            >
+              {/* {sliderImages[currentIndex].title} */}
+            </motion.h1>
+          </AnimatePresence>
         </motion.div>
       </div>
 

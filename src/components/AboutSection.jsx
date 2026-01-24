@@ -1,7 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import LaurelWreath from './LaurelWreath';
 
 export default function AboutSection() {
+  const awards = [
+    { title: "FIAP", award: "Honorable Mention", color: "text-neutral-400" },
+    { title: "FIAP", award: "Acceptance", color: "text-neutral-400" },
+    { title: "APS", award: "Gold Medal", color: "text-yellow-600" },
+    { title: "APS", award: "Honorable Mention", color: "text-neutral-400" },
+    { title: "JIUN", award: "Intl. Excellence", color: "text-yellow-600" },
+    { title: "NPAS", award: "Gold, Silver & Bronze", color: "text-yellow-600" },
+    { title: "NPAS", award: "Honorable Mention", color: "text-neutral-400" },
+    { title: "L.E. Samararathne", award: "Best Mono Portrait '24", color: "text-neutral-800" },
+    { title: "Youth Award", award: "Gold, Silver & Bronze", color: "text-yellow-600" },
+  ];
+
   return (
     <section id="about" className="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center bg-white">
       <motion.div
@@ -9,20 +22,39 @@ export default function AboutSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-4xl"
+        className="max-w-6xl"
       >
         <p className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-neutral-500 mb-8">
           About Me
         </p>
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-neutral-900 mb-10">
-          I’m known for capturing <span className="font-serif italic text-neutral-600">intimate moments</span> as timeless pieces of art.
-        </h2>
-        <div className="w-24 h-[1px] bg-neutral-900 mx-auto" />
-        <p className="mt-10 text-neutral-600 font-light leading-relaxed max-w-2xl mx-auto text-lg">
-          Among the best photographers in Sri Lanka, I’m Geeshan, a passionate wedding and portrait photographer. 
-          My approach is simple: I listen to your story, and I let it guide my lens. I believe in the beauty of the unscripted, 
-          the raw emotion of a glance, and the quiet elegance of a moment frozen in time.
-        </p>
+        
+        <div className="text-neutral-600 font-light leading-relaxed max-w-3xl mx-auto text-base space-y-6 text-justify">
+          <p>
+            T.M.W. Tennakoon is an award-winning Sri Lankan art photographer, holding the Licentiate Distinction (LNPAS), a 3-year Diploma in Photography (Credit Pass) from the National Photography Art Society of Sri Lanka and a National Certificate in Photography (NVQ Level 4). He is recognized for expressive visual storytelling and a distinctive artistic vision that blends technical precision with artistic depth.
+          </p>
+          <p>
+            Through a thoughtful use of light, composition, and perspective, he transforms ordinary moments into powerful visual narratives that evoke emotion, atmosphere, and meaning. His work reflects a strong eye for detail and a disciplined yet creative approach to image making.
+          </p>
+          <p>
+            Driven by passion and experience, each photograph reveals a careful balance between concept and execution. As his style continues to evolve, T.M.W. Tennakoon’s photography is gaining growing recognition both locally and internationally, establishing him as a compelling voice in contemporary art photography.
+          </p>
+        </div>
+
+        <div className="mt-24">
+          <h3 className="text-2xl font-light text-neutral-900 mb-12 tracking-wider">International & Sri Lankan Awards</h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 justify-center items-center">
+            {awards.map((award, index) => (
+              <LaurelWreath 
+                key={index}
+                title={award.title}
+                award={award.award}
+                color={award.color}
+                delay={index * 0.1}
+              />
+            ))}
+          </div>
+        </div>
       </motion.div>
     </section>
   );

@@ -59,9 +59,9 @@ export default function MainNavbar() {
               aria-label="Home"
             >
               <CloudinaryImage 
-                publicId="logo-main2_uldguv" 
+                publicId="logo-white_yfxfwt" 
                 alt="Geeshan Bandara Logo" 
-                className="h-32 w-auto object-contain" 
+                className="h-16 md:h-20 w-auto object-contain" 
               />
             </button>
           </div>
