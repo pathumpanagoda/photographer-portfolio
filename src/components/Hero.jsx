@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import CloudinaryImage from './CloudinaryImage';
 
 const sliderImages = [
@@ -10,6 +10,10 @@ const sliderImages = [
   { publicId: "3_gwbjgs", title: "Death is the..." },
   { publicId: "9_hi67hn", title: "FAMILY" },
   { publicId: "8_pjatrv", title: "Spring is far away" },
+  { publicId: "Etugala_fall_edit_ehd1bl", title: "Etugala fall" },
+  { publicId: "Leader_edit_hg2j2j", title: "Leader" },
+  { publicId: "19_Tea_Picker_edit_pqbtfj", title: "Tea picker" },
+  { publicId: "20_Enigmatic_Fog_edit_nby7ll", title: "Enigmatic fog" },
 ];
 
 export default function Hero() {
@@ -24,7 +28,15 @@ export default function Hero() {
       setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? sliderImages.length - 1 : prev - 1));
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-neutral-50">
@@ -52,7 +64,7 @@ export default function Hero() {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex items-center justify-center p-12 text-center h-full w-full">
+      <div className="relative z-10 flex items-center justify-center p-12 text-center h-full w-full pointer-events-none">
         <motion.div 
           className="max-w-5xl/ space-y-8"
         >
@@ -63,12 +75,30 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-2xl md:text-2xl lg:text-2xl font-light tracking-tighter text-white leading-[1.1] drop-shadow-sm uppercase"
+              className="text-2xl md:text-2xl lg:text-2xl font-light tracking-tighter text-white leading-[1.1] drop-shadow-sm uppercase pointer-events-auto"
             >
               {/* {sliderImages[currentIndex].title} */}
             </motion.h1>
           </AnimatePresence>
         </motion.div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-8 md:px-12 z-20 pointer-events-none">
+        <button 
+          onClick={prevSlide}
+          className="pointer-events-auto p-2 sm:p-3 rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-sm transition-all"
+          aria-label="Previous Slide"
+        >
+          <ChevronLeft size={32} />
+        </button>
+        <button 
+          onClick={nextSlide}
+          className="pointer-events-auto p-2 sm:p-3 rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-sm transition-all"
+          aria-label="Next Slide"
+        >
+          <ChevronRight size={32} />
+        </button>
       </div>
 
       <motion.div 

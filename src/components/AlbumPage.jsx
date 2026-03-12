@@ -65,9 +65,7 @@ export default function AlbumPage() {
               className="break-inside-avoid relative group overflow-hidden"
             >
               <CloudinaryImage 
-                src={img} 
-                // Assuming albumImages might eventually become objects with publicId, but for now they are strings.
-                // We will rely on src fallback for now.
+                publicId={img} 
                 alt={`${album.title} - ${index}`} 
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />
