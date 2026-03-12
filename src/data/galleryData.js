@@ -1,14 +1,46 @@
 export const galleryData = [
-  { 
+    { 
     id: 1, 
     category: 'gallery', 
+    title: 'Child violinists', 
+    date: 'Mar 2025', 
+    coverImagePublicId: 'Child_violinists_ajnkqc',
+    albumImages: ['Child_violinists_ajnkqc']
+  },
+  {
+    id: 2, 
+    category: 'gallery', 
+    title: 'Mind reading', 
+    date: 'Dec 2025', 
+    coverImagePublicId: 'Mind_Reading_vyzmcg',
+    albumImages: ['Mind_Reading_vyzmcg']
+  },
+  {
+    id: 3, 
+    category: 'gallery', 
+    title: 'The wealth of life', 
+    date: 'Dec 2025', 
+    coverImagePublicId: 'The_wealth_of_life_edit_dfi1x3',
+    albumImages: ['The_wealth_of_life_edit_dfi1x3']
+  },
+  {
+    id: 4, 
+    category: 'gallery', 
+    title: 'Gossip poles', 
+    date: 'Dec 2025', 
+    coverImagePublicId: 'GOSSIP_POLES_edit_v819co',
+    albumImages: ['GOSSIP_POLES_edit_v819co']
+  },
+  { 
+    id: 5, 
+    category: 'gallery',  
     title: 'GOSSIP POLES', 
     date: 'Dec 2025', 
     coverImagePublicId: '5_xmo6gy',
     albumImages: ['5_xmo6gy', '1_y3mkde']
   },
   { 
-    id: 2, 
+    id: 6, 
     category: 'gallery', 
     title: 'Portfolio', 
     date: 'Nov 2025', 
@@ -16,7 +48,7 @@ export const galleryData = [
     albumImages: ['1_y3mkde', '5_xmo6gy', 'Etugala_fall_edit_ehd1bl']
   },
   { 
-    id: 3, 
+    id: 7, 
     category: 'gallery', 
     title: 'Flying to loved', 
     date: 'Oct 2025', 
@@ -24,7 +56,7 @@ export const galleryData = [
     albumImages: ['4_ihmesj', '3_gwbjgs']
   },
   { 
-    id: 4, 
+    id: 8, 
     category: 'gallery', 
     title: 'Death is the...', 
     date: 'Sep 2025', 
@@ -32,7 +64,7 @@ export const galleryData = [
     albumImages: ['3_gwbjgs', '4_ihmesj', 'Leader_edit_hg2j2j']
   },
   { 
-    id: 5, 
+    id: 9, 
     category: 'gallery', 
     title: 'FAMILY', 
     date: 'Aug 2025', 
@@ -40,7 +72,7 @@ export const galleryData = [
     albumImages: ['9_hi67hn', '8_pjatrv']
   },
   { 
-    id: 6, 
+    id: 10, 
     category: 'gallery', 
     title: 'Spring is far away', 
     date: 'Jul 2025', 
@@ -48,7 +80,7 @@ export const galleryData = [
     albumImages: ['8_pjatrv', '9_hi67hn']
   },
   { 
-    id: 7, 
+    id: 11, 
     category: 'gallery', 
     title: 'Etugala fall', 
     date: 'Jun 2025', 
@@ -56,7 +88,7 @@ export const galleryData = [
     albumImages: ['Etugala_fall_edit_ehd1bl', 'Leader_edit_hg2j2j']
   },
   { 
-    id: 8, 
+    id: 12, 
     category: 'gallery', 
     title: 'Leader', 
     date: 'May 2025', 
@@ -64,7 +96,7 @@ export const galleryData = [
     albumImages: ['Leader_edit_hg2j2j', '19_Tea_Picker_edit_pqbtfj']
   },
   { 
-    id: 9, 
+    id: 13, 
     category: 'gallery', 
     title: 'Tea picker', 
     date: 'Apr 2025', 
@@ -72,11 +104,12 @@ export const galleryData = [
     albumImages: ['19_Tea_Picker_edit_pqbtfj', '20_Enigmatic_Fog_edit_nby7ll']
   },
   { 
-    id: 10, 
+    id: 14, 
     category: 'gallery', 
     title: 'Enigmatic fog', 
     date: 'Mar 2025', 
     coverImagePublicId: '20_Enigmatic_Fog_edit_nby7ll',
     albumImages: ['20_Enigmatic_Fog_edit_nby7ll', '19_Tea_Picker_edit_pqbtfj']
-  }
+  },
+
 ];
