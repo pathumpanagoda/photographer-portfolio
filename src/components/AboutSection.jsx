@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import CloudinaryImage from './CloudinaryImage';
 import LaurelWreath from './LaurelWreath';
 
 export default function AboutSection() {
@@ -16,28 +17,46 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center bg-white">
+    <section id="about" className="container mx-auto px-6 py-24 md:py-32 bg-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-6xl"
+        className="max-w-6xl mx-auto"
       >
-        <p className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-neutral-500 mb-8">
-          About Me
-        </p>
-        
-        <div className="text-neutral-600 font-light leading-relaxed max-w-3xl mx-auto text-base space-y-6 text-justify">
-          <p>
-            T.M.W. Tennakoon is an award-winning Sri Lankan art photographer, holding the Licentiate Distinction (LNPAS), a 3-year Diploma in Photography (Credit Pass) from the National Photography Art Society of Sri Lanka and a National Certificate in Photography (NVQ Level 4). He is recognized for expressive visual storytelling and a distinctive artistic vision that blends technical precision with artistic depth.
+        <div className="text-center mb-16">
+          <p className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-neutral-500 mb-4">
+            About Me
           </p>
-          <p>
-            Through a thoughtful use of light, composition, and perspective, he transforms ordinary moments into powerful visual narratives that evoke emotion, atmosphere, and meaning. His work reflects a strong eye for detail and a disciplined yet creative approach to image making.
-          </p>
-          <p>
-            Driven by passion and experience, each photograph reveals a careful balance between concept and execution. As his style continues to evolve, T.M.W. Tennakoon’s photography is gaining growing recognition both locally and internationally, establishing him as a compelling voice in contemporary art photography.
-          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="text-neutral-600 font-light leading-relaxed text-base space-y-6 text-justify">
+            <p>
+              T.M.W. Tennakoon is an award-winning Sri Lankan art photographer, holding the Licentiate Distinction (LNPAS), a 3-year Diploma in Photography (Credit Pass) from the National Photography Art Society of Sri Lanka and a National Certificate in Photography (NVQ Level 4). He is recognized for expressive visual storytelling and a distinctive artistic vision that blends technical precision with artistic depth.
+            </p>
+            <p>
+              Through a thoughtful use of light, composition, and perspective, he transforms ordinary moments into powerful visual narratives that evoke emotion, atmosphere, and meaning. His work reflects a strong eye for detail and a disciplined yet creative approach to image making.
+            </p>
+            <p>
+              Driven by passion and experience, each photograph reveals a careful balance between concept and execution. As his style continues to evolve, T.M.W. Tennakoon’s photography is gaining growing recognition both locally and internationally, establishing him as a compelling voice in contemporary art photography.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative aspect-[4/5] bg-neutral-100 overflow-hidden shadow-2xl"
+          >
+            <CloudinaryImage 
+              publicId="image_auther" 
+              alt="T.M.W. Tennakoon" 
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </motion.div>
         </div>
 
         <div className="mt-24">
