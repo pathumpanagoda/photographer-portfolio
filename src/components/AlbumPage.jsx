@@ -48,7 +48,6 @@ export default function AlbumPage() {
         >
           <p className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-400 mb-4">{album.category}</p>
           <h1 className="text-4xl md:text-6xl font-light tracking-wide text-neutral-900 mb-6">{album.title}</h1>
-          <p className="text-neutral-500 tracking-widest text-sm">{album.date}</p>
         </motion.div>
       </header>
 

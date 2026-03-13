@@ -43,7 +43,6 @@ export default function GalleryGrid({ currentCategory }) {
                 <div className="space-y-1">
                   <p className="text-xs font-medium tracking-[0.2em] uppercase text-neutral-400">{item.category}</p>
                   <h3 className="text-xl font-light tracking-wide text-neutral-900">{item.title}</h3>
-                  <p className="text-xs text-neutral-300 tracking-wider group-hover:text-neutral-500 transition-colors duration-300">{item.date}</p>
                 </div>
               </button>
             </motion.div>

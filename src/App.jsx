@@ -27,10 +27,10 @@ function HomePage() {
         <div className="container mx-auto px-6 text-center mb-12">
           <span className="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-500">Portfolio</span>
         </div>
-        <GalleryFilters 
-          currentCategory={currentCategory} 
-          onCategoryChange={setCurrentCategory} 
-        />
+{/* <GalleryFilters 
+  currentCategory={currentCategory} 
+  onCategoryChange={setCurrentCategory} 
+/> */}
         <GalleryGrid 
           currentCategory={currentCategory} 
         />
