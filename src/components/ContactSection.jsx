@@ -34,7 +34,7 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <Mail size={16} />
                   </div>
-                  <span className="tracking-wider">hello@geeshan.com</span>
+                  <span className="tracking-wider">tmwtennakoon71@gmail.com</span>
                 </a>
                 <a href="tel:+94773219199" className="flex items-center gap-4 hover:text-neutral-900 transition-colors">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
