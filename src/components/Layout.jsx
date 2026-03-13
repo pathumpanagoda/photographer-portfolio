@@ -42,7 +42,7 @@ export default function Layout({ children }) {
 
       <footer className="py-12 bg-neutral-900 text-white mt-auto">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-light tracking-widest mb-8">TENNAKOON</h2>
+          <h2 className="text-2xl font-light tracking-widest mb-8" ><a href="https://kodex99.com/" target="_blank">Kodex99</a></h2>
           <div className="flex justify-center gap-6 mb-8 text-neutral-400">
             <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
