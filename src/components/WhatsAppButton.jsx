@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
-  const phoneNumber = '94788521223'; // Sri Lanka code +94, removing leading 0
+  const phoneNumber = '94773219199'; // Sri Lanka code +94, removing leading 0
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (

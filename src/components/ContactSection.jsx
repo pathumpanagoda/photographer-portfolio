@@ -36,11 +36,11 @@ export default function ContactSection() {
                   </div>
                   <span className="tracking-wider">hello@geeshan.com</span>
                 </a>
-                <a href="tel:+94711234567" className="flex items-center gap-4 hover:text-neutral-900 transition-colors">
+                <a href="tel:+94773219199" className="flex items-center gap-4 hover:text-neutral-900 transition-colors">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <Phone size={16} />
                   </div>
-                  <span className="tracking-wider">+94 71 123 4567</span>
+                  <span className="tracking-wider">+94 77 321 9199</span>
                 </a>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
