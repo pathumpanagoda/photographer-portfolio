@@ -31,7 +31,7 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 lg:gap-24 items-center">
           <div className="text-neutral-600 font-light leading-relaxed text-base space-y-6 text-justify">
             <p>
               T.M.W. Tennakoon is an award-winning Sri Lankan art photographer, holding the Licentiate Distinction (LNPAS), a 3-year Diploma in Photography (Credit Pass) from the National Photography Art Society of Sri Lanka and a National Certificate in Photography (NVQ Level 4). He is recognized for expressive visual storytelling and a distinctive artistic vision that blends technical precision with artistic depth.
@@ -44,19 +44,21 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative aspect-[4/5] bg-neutral-100 overflow-hidden shadow-2xl"
-          >
-            <CloudinaryImage 
-              publicId="image_auther" 
-              alt="T.M.W. Tennakoon" 
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </motion.div>
+          <div className="flex justify-center md:justify-end">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative aspect-[4/5] bg-neutral-100 overflow-hidden shadow-2xl w-full max-w-sm"
+            >
+              <CloudinaryImage 
+                publicId="image_auther" 
+                alt="T.M.W. Tennakoon" 
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </motion.div>
+          </div>
         </div>
 
         <div className="mt-24">
