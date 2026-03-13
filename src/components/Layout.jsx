@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       {/* Mobile Header / Brand */}
       <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 md:hidden bg-white/90 backdrop-blur-md">
         <Link to="/" className="text-xl font-medium tracking-widest uppercase">
-          Geeshan
+          Tennakoon
         </Link>
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

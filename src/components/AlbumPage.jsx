@@ -35,7 +35,7 @@ export default function AlbumPage() {
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           Back to Gallery
         </Link>
-        <div className="text-xl font-medium tracking-widest uppercase">Geeshan</div>
+        <div className="text-xl font-medium tracking-widest uppercase">Tennakoon</div>
         <div className="w-20"></div> {/* Spacer for symmetry */}
       </nav>
 

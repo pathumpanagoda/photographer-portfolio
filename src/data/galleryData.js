@@ -97,4 +97,22 @@ export const galleryData = [
     coverImagePublicId: '20_Enigmatic_Fog_edit_nby7ll',
     albumImages: ['20_Enigmatic_Fog_edit_nby7ll', '19_Tea_Picker_edit_pqbtfj']
   },
+  {
+    id: 15, 
+    category: 'gallery', 
+    title: 'Enigmatic fog', 
+    coverImagePublicId: 'Reality_x00yov',
+  },
+  {
+    id: 16, 
+    category: 'gallery', 
+    title: 'The_universal_language_ymghxf', 
+    coverImagePublicId: 'The_universal_language_ymghxf',
+  },
+  {
+    id: 17, 
+    category: 'gallery', 
+    title: 'Skyline', 
+    coverImagePublicId: '2_qffwoi',
+  },
 ];

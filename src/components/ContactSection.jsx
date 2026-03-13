@@ -30,7 +30,7 @@ export default function ContactSection() {
               </p>
               
               <div className="space-y-4 pt-4">
-                <a href="mailto:hello@geeshan.com" className="flex items-center gap-4 hover:text-neutral-900 transition-colors">
+                <a href="mailto:tmwtennakoon71@gmail.com" className="flex items-center gap-4 hover:text-neutral-900 transition-colors">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <Mail size={16} />
                   </div>

@@ -60,7 +60,7 @@ export default function MainNavbar() {
             >
               <CloudinaryImage 
                 publicId="logo-white_yfxfwt" 
-                alt="Geeshan Bandara Logo" 
+                alt="Tennakoon Logo" 
                 className="h-16 md:h-20 w-auto object-contain" 
               />
             </button>
