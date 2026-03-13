@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       {/* Mobile Header / Brand */}
       <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 md:hidden bg-white/90 backdrop-blur-md">
         <Link to="/" className="text-xl font-medium tracking-widest uppercase">
-          Geeshan
+          Tennakoon
         </Link>
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
 
       <footer className="py-12 bg-neutral-900 text-white mt-auto">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-light tracking-widest mb-8">GEESHAN BANDARA</h2>
+          <h2 className="text-2xl font-light tracking-widest mb-8">TENNAKOON</h2>
           <div className="flex justify-center gap-6 mb-8 text-neutral-400">
             <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
