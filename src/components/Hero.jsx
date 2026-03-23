@@ -4,14 +4,16 @@ import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import CloudinaryImage from './CloudinaryImage';
 
 const sliderImages = [
-  { publicId: "5_xmo6gy", title: "GOSSIP POLES" },
+  // { publicId: "5_xmo6gy", title: "GOSSIP POLES" },
+  { publicId: "Leader_edit_hg2j2j", title: "Leader" },
   { publicId: "1_y3mkde", title: "Portfolio" },
   { publicId: "4_ihmesj", title: "Flying to loved" },
+    { publicId: "2_qffwoi", title: "NN 01" },
+  { publicId: "Reality_x00yov", title: "Religious freedom" },
   { publicId: "3_gwbjgs", title: "Death is the..." },
   { publicId: "9_hi67hn", title: "FAMILY" },
   { publicId: "8_pjatrv", title: "Spring is far away" },
   { publicId: "Etugala_fall_edit_ehd1bl", title: "Etugala fall" },
-  { publicId: "Leader_edit_hg2j2j", title: "Leader" },
   { publicId: "19_Tea_Picker_edit_pqbtfj", title: "Tea picker" },
   { publicId: "20_Enigmatic_Fog_edit_nby7ll", title: "Enigmatic fog" },
 ];

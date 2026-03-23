@@ -40,13 +40,13 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <Phone size={16} />
                   </div>
-                  <span className="tracking-wider">+94 77 321 9199</span>
+                  <span className="tracking-wider">+94 77 784 0323</span>
                 </a>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <MapPin size={16} />
                   </div>
-                  <span className="tracking-wider">Colombo, Sri Lanka</span>
+                  <span className="tracking-wider">No 73, Linkwood Place, wehera, Kurunegala, Sri Lanka.</span>
                 </div>
               </div>
             </div>
