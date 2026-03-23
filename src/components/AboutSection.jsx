@@ -31,15 +31,14 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 lg:gap-24 items-center mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 lg:gap-24 items-start mb-32">
           <div className="text-neutral-600 font-light leading-relaxed text-base space-y-6">
-            <p className="tracking-wide">
-              T.M.W. Tennakoon is an award-winning Sri Lankan art photographer, holding the Licentiate Distinction (LNPAS), a 3-year Diploma in Photography (Credit Pass) from the National Photography Art Society of Sri Lanka and a National Certificate in Photography (NVQ Level 4). He is recognized for expressive visual storytelling and a distinctive artistic vision that blends technical precision with artistic depth.
-            </p>
-            <p className="tracking-wide">
+            <p className="tracking-wide text-justify">
+              T.M.W. Tennakoon is an award-winning Sri Lankan art photographer, holding the Licentiate Distinction (LNPAS), a 3-year Diploma in Photography from the National Photography Art Society of Sri Lanka (Operational member of FIAP, Member of PSA, World Photography Center Sri Lanka of GPU) and a National Certificate in Photography (NVQ Level 4) from the National Apprentice and Industrial Training Authority (NAITA) Sri Lanka). He is recognized for expressive visual storytelling and a distinctive artistic vision that blends technical precision with artistic depth.            </p>
+            <p className="tracking-wide text-justify">
               Through a thoughtful use of light, composition, and perspective, he transforms ordinary moments into powerful visual narratives that evoke emotion, atmosphere, and meaning. His work reflects a strong eye for detail and a disciplined yet creative approach to image making.
             </p>
-            <p className="tracking-wide">
+            <p className="tracking-wide text-justify">
               Driven by passion and experience, each photograph reveals a careful balance between concept and execution. As his style continues to evolve, T.M.W. Tennakoon’s photography is gaining growing recognition both locally and internationally, establishing him as a compelling voice in contemporary art photography.
             </p>
             
