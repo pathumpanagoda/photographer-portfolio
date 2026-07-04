@@ -40,13 +40,13 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <Phone size={16} />
                   </div>
-                  <span className="tracking-wider">+94 77 321 9199</span>
+                  <span className="tracking-wider">+94 77 784 0323</span>
                 </a>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center">
                     <MapPin size={16} />
                   </div>
-                  <span className="tracking-wider">Colombo, Sri Lanka</span>
+                  <span className="tracking-wider">No 73, Linkwood Place, wehera, Kurunegala, Sri Lanka.</span>
                 </div>
               </div>
             </div>
@@ -57,16 +57,49 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="space-y-6"
-            onSubmit={(e) => e.preventDefault()}
+            action="https://formsubmit.co/tmwtennakoon71@gmail.com"
+            method="POST"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input type="text" placeholder="Name" className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light" />
-              <input type="email" placeholder="Email" className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light" />
-            </div>
-            <input type="text" placeholder="Subject / Event Date" className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light" />
-            <textarea rows="5" placeholder="Tell me about your story..." className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light resize-none"></textarea>
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style={{ display: 'none' }} />
             
-            <button className="bg-neutral-900 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-neutral-800 transition-colors w-full md:w-auto flex justify-center items-center gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input 
+                type="text" 
+                name="name"
+                required
+                placeholder="Name" 
+                className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light" 
+              />
+              <input 
+                type="email" 
+                name="email"
+                required
+                placeholder="Email" 
+                className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light" 
+              />
+            </div>
+            <input 
+              type="text" 
+              name="subject"
+              required
+              placeholder="Subject / Event Date" 
+              className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light" 
+            />
+            <textarea 
+              name="message"
+              required
+              rows="5" 
+              placeholder="Tell me about your story..." 
+              className="w-full bg-white border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors placeholder:text-neutral-300 font-light resize-none"
+            ></textarea>
+            
+            <button 
+              type="submit"
+              className="bg-neutral-900 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:bg-neutral-800 transition-colors w-full md:w-auto flex justify-center items-center gap-2"
+            >
               Send Message <ArrowRight size={14} />
             </button>
           </motion.form>
