@@ -39,7 +39,7 @@ function HomePage() {
       <ContactSection />
       
       <footer className="bg-neutral-900 text-white py-12 text-center">
-        <p className="text-xs tracking-widest uppercase text-neutral-500">© 2026 <a href="https://kodex99.com/" target="_blank">Kodex99</a>. All rights reserved.</p>
+        <p className="text-xs tracking-widest uppercase text-neutral-500">© 2026 <a href="https://kodex99.com/" target="_blank">Kodex99 (Pvt) Ltd</a>. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -31,12 +31,12 @@ export default function GalleryGrid({ currentCategory }) {
                 onClick={() => setSelectedImage(item)} 
                 className="block text-left w-full focus:outline-none focus:ring-2 focus:ring-neutral-200"
               >
-                <div className="relative overflow-hidden bg-neutral-100 mb-6 aspect-[4/5] cursor-none custom-cursor-hover">
+                <div className="relative overflow-hidden bg-neutral-100 mb-6 cursor-none custom-cursor-hover">
                   <CloudinaryImage 
                     src={item.coverImage} 
                     publicId={item.coverImagePublicId}
                     alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                    className="w-full h-auto object-contain transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                   />
                 </div>
                 
