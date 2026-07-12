@@ -8,8 +8,7 @@ import GalleryFilters from './components/GalleryFilters';
 import GalleryGrid from './components/GalleryGrid';
 import ContactSection from './components/ContactSection';
 import CustomCursor from './components/CustomCursor';
-import AlbumPage from './components/AlbumPage';
-
+import WhatsAppButton from './components/WhatsAppButton';
 function HomePage() {
   const [currentCategory, setCurrentCategory] = useState('all');
 
@@ -28,10 +27,10 @@ function HomePage() {
         <div className="container mx-auto px-6 text-center mb-12">
           <span className="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-500">Portfolio</span>
         </div>
-        <GalleryFilters 
-          currentCategory={currentCategory} 
-          onCategoryChange={setCurrentCategory} 
-        />
+{/* <GalleryFilters 
+  currentCategory={currentCategory} 
+  onCategoryChange={setCurrentCategory} 
+/> */}
         <GalleryGrid 
           currentCategory={currentCategory} 
         />
@@ -40,18 +39,21 @@ function HomePage() {
       <ContactSection />
       
       <footer className="bg-neutral-900 text-white py-12 text-center">
-        <p className="text-xs tracking-widest uppercase text-neutral-500">© 2025 Geeshan Bandara. All rights reserved.</p>
+        <p className="text-xs tracking-widest uppercase text-neutral-500">© 2026 <a href="https://kodex99.com/" target="_blank">Kodex99 (Pvt) Ltd</a>. All rights reserved.</p>
       </footer>
     </div>
   );
 }
 
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/album/:id" element={<AlbumPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+      <WhatsAppButton />
+    </>
   );
 }
 

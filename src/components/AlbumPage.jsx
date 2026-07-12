@@ -35,7 +35,7 @@ export default function AlbumPage() {
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           Back to Gallery
         </Link>
-        <div className="text-xl font-medium tracking-widest uppercase">Geeshan</div>
+        <div className="text-xl font-medium tracking-widest uppercase">Tennakoon</div>
         <div className="w-20"></div> {/* Spacer for symmetry */}
       </nav>
 
@@ -48,7 +48,6 @@ export default function AlbumPage() {
         >
           <p className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-400 mb-4">{album.category}</p>
           <h1 className="text-4xl md:text-6xl font-light tracking-wide text-neutral-900 mb-6">{album.title}</h1>
-          <p className="text-neutral-500 tracking-widest text-sm">{album.date}</p>
         </motion.div>
       </header>
 
@@ -65,9 +64,7 @@ export default function AlbumPage() {
               className="break-inside-avoid relative group overflow-hidden"
             >
               <CloudinaryImage 
-                src={img} 
-                // Assuming albumImages might eventually become objects with publicId, but for now they are strings.
-                // We will rely on src fallback for now.
+                publicId={img} 
                 alt={`${album.title} - ${index}`} 
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />

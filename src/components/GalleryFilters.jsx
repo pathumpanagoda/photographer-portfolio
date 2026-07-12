@@ -3,10 +3,7 @@ import { motion } from 'framer-motion';
 
 const categories = [
   { id: 'all', label: 'All' },
-  { id: 'couples', label: 'Couples' },
-  { id: 'maternity', label: 'Maternity' },
-  { id: 'weddings', label: 'Weddings' },
-  { id: 'portraits', label: 'Portraits' },
+  { id: 'gallery', label: 'Gallery' },
 ];
 
 export default function GalleryFilters({ currentCategory, onCategoryChange }) {
